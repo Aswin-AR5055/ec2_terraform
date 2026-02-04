@@ -128,38 +128,3 @@ http://<PUBLIC_IP>:1337
 ```bash
 terraform destroy
 ```
-
----
-
-**Git + PR**
-1. Initialize repo (already present):
-```bash
-git status
-```
-2. Create a branch:
-```bash
-git checkout -b feature/ec2-strapi
-```
-3. Commit changes:
-```bash
-git add .
-git commit -m "Document EC2 + Strapi provisioning"
-```
-4. Push and open a PR:
-```bash
-git push -u origin feature/ec2-strapi
-```
-
----
-
-**Submission Checklist**
-1. Terraform module structure in repo.
-2. `terraform apply` completed successfully.
-3. `strapi-key.pem` created locally.
-4. Strapi reachable at `http://<PUBLIC_IP>:1337`.
-5. Loom video recorded of provisioning + Strapi steps.
-6. PR raised with documentation changes.
-7. Post progress in submission channel with:
-   - PR link
-   - Loom link
-   - Terraform outputs (redact sensitive data)
