@@ -17,6 +17,10 @@ This repo provisions an AWS EC2 instance with Terraform using a module structure
 
 ---
 
+![Strapi Content](screenshot/strapi-contents.png)
+
+---
+
 **Architecture Summary**
 - `modules/key_pair` generates an RSA key, creates an AWS key pair, and writes `strapi-key.pem`.
 - `modules/security_group` creates a security group with:
