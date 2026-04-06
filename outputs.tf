@@ -13,3 +13,7 @@ output "key_name" {
 output "security_group_id" {
   value = module.security_group.security_group_id
 }
+
+output "cloudfront_domain_name" {
+  value = module.cloudfront.cloudfront_domain_name
+}

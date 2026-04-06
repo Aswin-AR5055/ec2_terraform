@@ -4,7 +4,11 @@ module "key_pair" {
 
 module "security_group" {
   source = "./modules/security_group"
-  my_public_ip = var.my_public_ip
+}
+
+module "cloudfront" {
+  source = "./modules/cloudfront"
+  ec2_domain_name = module.ec2.ec2_domain_name
 }
 
 module "ec2" {

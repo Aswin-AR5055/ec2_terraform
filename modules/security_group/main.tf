@@ -1,16 +1,16 @@
-resource "aws_security_group" "strapi_sg" {
-  name = "strapi-sg"
+resource "aws_security_group" "hospital_sg" {
+  name = "hospital-sg"
 
   ingress {
     from_port = 22
     to_port = 22
     protocol = "tcp"
-    cidr_blocks = [ var.my_public_ip ]
+    cidr_blocks = [ "0.0.0.0/0" ]
   }
 
   ingress {
-    from_port = 1337
-    to_port = 1337
+    from_port = 80
+    to_port = 80
     protocol = "tcp"
     cidr_blocks = [ "0.0.0.0/0" ]
   }

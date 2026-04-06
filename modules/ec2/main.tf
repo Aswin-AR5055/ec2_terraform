@@ -13,13 +13,13 @@ data "aws_ami" "my_ubuntu_ami" {
   }
 }
 
-resource "aws_instance" "my_strapi_instance" {
+resource "aws_instance" "my_hospital_instance" {
   ami = data.aws_ami.my_ubuntu_ami.id
   instance_type = var.instance_type
   key_name = var.key_name
   vpc_security_group_ids = [ var.security_group]
 
   tags = {
-    Name = "ec2_strapi"
+    Name = "ec2_hospital"
   }
 }
